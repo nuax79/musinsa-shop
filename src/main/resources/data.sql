@@ -1,0 +1,7 @@
+INSERT INTO COMPANY(COM_ID, COM_TYPE, PASSWD, CEO, COM_NM, BIZ_TYPE, BIZ_NUM, PAY_FEE, USE_YN, REG_DM) VALUES('MUSINSA', 1, 'qwas!!', '이순신', '무신사', 'C', '111-111-1234', 0.23, 'Y', NOW());
+INSERT INTO COMPANY(COM_ID, COM_TYPE, PASSWD, CEO, COM_NM, BIZ_TYPE, BIZ_NUM, PAY_FEE, USE_YN, REG_DM) VALUES('COUPANG', 1, 'ddff4!!', '홍길동', '쿠팡', 'C', '222-111-1234', 0.33, 'Y', NOW());
+INSERT INTO COMPANY(COM_ID, COM_TYPE, PASSWD, CEO, COM_NM, BIZ_TYPE, BIZ_NUM, PAY_FEE, USE_YN, REG_DM) VALUES('11ST', 1, 'dfdsfsd4!!', '이유리', '11번가', 'C', '222-111-1234', 0.13, 'Y', NOW());
+
+INSERT INTO GOODS(GOODS_NO, GOODS_NM, DESCRIPTION, COM_ID, REG_DM) VALUES(1, '헤비웨이트 속기모 테이퍼드 히든 밴딩 10부 슬랙스 [블랙]', '슬림한 실루엣의 헤비웨이트 속기모 테이퍼드 히든 밴딩 10부 슬랙스. 3%의 폴리우레탄이 포함된 양방향 스트레치 T/R 원단을 사용해 신축성이 뛰어나고 자유로운 활동성을 제공한다. 사계절용 제품에 비해 높은 중량으로 두껍게 제직하고 안쪽 면에 기모 가공을 더해 부드러운 촉감과 뛰어난 보온성을 갖췄다. 제품의 안쪽 면에만 기모가 있기 때문에 겉면은 깔끔한 외관을 지니고 있다.', 'MUSINSA', NOW());
+INSERT INTO GOODS(GOODS_NO, GOODS_NM, DESCRIPTION, COM_ID, REG_DM) VALUES(2, '레스터G RDS 구스다운 여성 롱패딩 (BLACK)', '오리털로 되어있는 롱다운 패딩', 'COUPANG', NOW());
+INSERT INTO GOODS(GOODS_NO, GOODS_NM, DESCRIPTION, COM_ID, REG_DM) VALUES(3, '푸마Ⅹ아미 슬립스트림 Lo - 화이트:아이보리', '스트리트웨어에 현대적인 감각을 가미해 완성한 푸마Ⅹ아미의 컬렉션입니다. 고급스러움과 캐주얼함 사이의 적절한 조화를 이룬 기본 아이템으로 편안하면서도 갖춰 입는 듯한 스타일을 연출할 수 있습니다. 슬립스트림은 1987년에 출시된 인기 프리미엄 농구화로 탁월한 편안함과 안정감을 선사합니다.', '11ST', NOW());
