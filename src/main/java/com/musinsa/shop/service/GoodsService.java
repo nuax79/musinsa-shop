@@ -48,5 +48,17 @@ public class GoodsService {
         return goodsNo;
     }
 
+    public Goods findById(final Integer goodsNo){
+        Goods entity = goodsRepository.findById(goodsNo).orElseThrow(() -> new CustomException(ErrorCode.POSTS_NOT_FOUND));
+        return entity;
+    }
+
+    public void delete(final Integer goodsNo) {
+        Goods entity = goodsRepository.findById(goodsNo)
+                .orElseThrow(() -> new CustomException(ErrorCode.POSTS_NOT_FOUND));
+
+        goodsRepository.delete(entity);
+    }
+
 
 }

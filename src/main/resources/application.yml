@@ -18,8 +18,8 @@ spring:
   application:
     name: musinsa
   datasource:
-    url: jdbc:h2:mem:shop;MODE=MySQL;DATABASE_TO_LOWER=TRUE;
-    driver-class-name: org.h2.Driver
+    url: jdbc:log4jdbc:h2:mem:shop;MODE=MySQL;DATABASE_TO_LOWER=TRUE;
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
     username: musinsa
     password: mu12!@
   h2:

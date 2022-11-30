@@ -17,14 +17,15 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ProductTest {
+public class GoodsTest {
 
     @Autowired
     GoodsRepository productRepository;
 
-    @Before("test")
+    @Before("goods test")
     void save(){
         Goods params = Goods.builder()
+                .goodsNo(5)
                 .goodsNm("테스트 상품")
                 .description("테스트 상품설명")
                 .comId("테스트 회사 아이디")
@@ -33,7 +34,7 @@ public class ProductTest {
 
         productRepository.save(params);
 
-        Goods entity = productRepository.findById((Integer) 1).get();
+        Goods entity = productRepository.findById((Integer) 5).get();
         assertThat(entity.getGoodsNm()).isEqualTo("테스트 상품");
         assertThat(entity.getDescription()).isEqualTo("테스트 상품설명");
 
@@ -41,14 +42,14 @@ public class ProductTest {
 
     @Test
     void findAll(){
-        long productCount = productRepository.count();
+        long goodsCount = productRepository.count();
 
         List<Goods> products = productRepository.findAll();
     }
 
     @Test
     void delete(){
-        Goods product = productRepository.findById((Integer) 1).get();
+        Goods product = productRepository.findById((Integer) 5).get();
         productRepository.delete(product);
     }
 
