@@ -25,7 +25,6 @@ public class GoodsTest {
     @Before("goods test")
     void save(){
         Goods params = Goods.builder()
-                .goodsNo(5)
                 .goodsNm("테스트 상품")
                 .description("테스트 상품설명")
                 .comId("테스트 회사 아이디")

@@ -41,24 +41,21 @@ public class GoodsService {
 
     @Transactional
     public Integer update(final Integer goodsNo, final GoodsRequestDto params){
-        Goods entity = goodsRepository.findById(goodsNo).orElseThrow(() -> new CustomException(ErrorCode.POSTS_NOT_FOUND));
+        Goods entity = goodsRepository.findById(goodsNo).orElseThrow(() -> new CustomException(ErrorCode.GOODS_NOT_FOUND));
 
         //TODO comId 존재하는 코드인지 조회 해야함
-        entity.update(params.getGoodsNo(), params.getGoodsNm(), params.getDescription(), params.getComId());
+        entity.update(params.getGoodsNm(), params.getDescription(), params.getComId());
         return goodsNo;
     }
 
     public Goods findById(final Integer goodsNo){
-        Goods entity = goodsRepository.findById(goodsNo).orElseThrow(() -> new CustomException(ErrorCode.POSTS_NOT_FOUND));
+        Goods entity = goodsRepository.findById(goodsNo).orElseThrow(() -> new CustomException(ErrorCode.GOODS_NOT_FOUND));
         return entity;
     }
 
+    @Transactional
     public void delete(final Integer goodsNo) {
-        Goods entity = goodsRepository.findById(goodsNo)
-                .orElseThrow(() -> new CustomException(ErrorCode.POSTS_NOT_FOUND));
-
+        Goods entity = goodsRepository.findById(goodsNo).orElseThrow(() -> new CustomException(ErrorCode.GOODS_NOT_FOUND));
         goodsRepository.delete(entity);
     }
-
-
 }

@@ -34,11 +34,10 @@ public class Goods {
         this.goodsNo = goodsNo;
         this.goodsNm = goodsNm;
         this.description = description;
-        this. comId = comId;
+        this.comId = comId;
     }
 
-    public void update(Integer goodsNo, String goodsNm, String description, String comId){
-        this.goodsNo = goodsNo;
+    public void update(String goodsNm, String description, String comId){
         this.goodsNm = goodsNm;
         this.description = description;
         this.comId = comId;

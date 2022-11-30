@@ -26,7 +26,7 @@ public class GoodsController {
         return goodsService.findAll();
     }
 
-    @PatchMapping("/{goodsNo}")
+    @PutMapping("/{goodsNo}")
     public Integer save(@PathVariable final Integer goodsNo, @RequestBody final GoodsRequestDto params){
         return goodsService.update(goodsNo, params);
     }
@@ -35,8 +35,9 @@ public class GoodsController {
     public Goods findById(@PathVariable final Integer goodsNo){
         return goodsService.findById(goodsNo);
     }
-    @PostMapping("/delete")
-    public void delete(@RequestBody final Integer goodsNo){
+
+    @DeleteMapping("/{goodsNo}")
+    public void delete(@PathVariable final Integer goodsNo){
         goodsService.delete(goodsNo);
     }
 }
