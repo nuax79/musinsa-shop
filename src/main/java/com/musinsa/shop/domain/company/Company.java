@@ -1,17 +1,25 @@
-package com.musinsa.shop.domain;
+package com.musinsa.shop.domain.company;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import lombok.AccessLevel;
 import lombok.Builder;
-import org.hibernate.annotations.Comment;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Entity
 public class Company {
 
     @Id
-    private long no;
+    private Long no;
 
+    @Column(name = "com_id")
     private String comId;
 
     private int comType;
@@ -34,6 +42,7 @@ public class Company {
 
     private LocalDateTime updDm;
 
+    @Builder
     public Company(String comId, int comType, String passwd, String ceo, String comNm, String bizType, String bizNum, BigDecimal payFee, String useYn) {
         this.comId = comId;
         this.comType = comType;

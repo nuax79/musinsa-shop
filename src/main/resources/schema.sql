@@ -1,13 +1,3 @@
-/*
-CREATE TABLE PRODUCT
-(
-    PRODUCT_ID      BIGINT NOT NULL, -- 유저 ID
-    PRODUCT_NAME    VARCHAR(20) NOT NULL, -- 비밀번호
-    QUANTITY        INT NOT NULL, -- 유저이름
-    CREATE_AT       TIMESTAMP,            -- 생성 일시
-    PRIMARY KEY (PRODUCT_ID)
-);*/
-
 CREATE TABLE GOODS(
     GOODS_NO    INT(11)         NOT NULL COMMENT '상품번호',
     GOODS_NM    VARCHAR(100)    DEFAULT NULL COMMENT '상품명',

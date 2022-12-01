@@ -2,7 +2,7 @@ package com.musinsa.shop.product;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.musinsa.shop.domain.Goods;
+import com.musinsa.shop.domain.goods.Goods;
 import com.musinsa.shop.repository.GoodsRepository;
 import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.Test;

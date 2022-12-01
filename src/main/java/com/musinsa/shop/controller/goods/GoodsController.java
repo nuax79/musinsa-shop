@@ -1,16 +1,16 @@
 package com.musinsa.shop.controller.goods;
 
-import com.musinsa.shop.domain.Goods;
-import com.musinsa.shop.domain.GoodsRequestDto;
-import com.musinsa.shop.domain.GoodsResponseDto;
-import com.musinsa.shop.service.GoodsService;
+import com.musinsa.shop.domain.goods.Goods;
+import com.musinsa.shop.domain.goods.GoodsRequestDto;
+import com.musinsa.shop.domain.goods.GoodsResponseDto;
+import com.musinsa.shop.service.goods.GoodsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/v1/goods")
+@RequestMapping("/${server.api.version}/goods")
 @RequiredArgsConstructor
 public class GoodsController {
 
@@ -27,7 +27,7 @@ public class GoodsController {
     }
 
     @PutMapping("/{goodsNo}")
-    public Integer save(@PathVariable final Integer goodsNo, @RequestBody final GoodsRequestDto params){
+    public Integer update(@PathVariable final Integer goodsNo, @RequestBody final GoodsRequestDto params){
         return goodsService.update(goodsNo, params);
     }
 

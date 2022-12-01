@@ -1,4 +1,4 @@
-package com.musinsa.shop.domain;
+package com.musinsa.shop.domain.goods;
 
 import lombok.AccessLevel;
 import lombok.Getter;

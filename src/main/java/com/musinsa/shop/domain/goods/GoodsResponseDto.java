@@ -1,5 +1,6 @@
-package com.musinsa.shop.domain;
+package com.musinsa.shop.domain.goods;
 
+import com.musinsa.shop.domain.company.Company;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
@@ -15,6 +16,8 @@ public class GoodsResponseDto {
 
     private String comId;
 
+    private Company company;
+
     private LocalDateTime regDm;
 
     private LocalDateTime updDm;
@@ -26,5 +29,6 @@ public class GoodsResponseDto {
         this.comId = entity.getComId();
         this.regDm = entity.getRegDm();
         this.updDm = entity.getUpdDm();
+        this.company = entity.getCompany();
     }
 }

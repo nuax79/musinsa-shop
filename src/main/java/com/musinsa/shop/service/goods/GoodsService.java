@@ -1,8 +1,8 @@
-package com.musinsa.shop.service;
+package com.musinsa.shop.service.goods;
 
-import com.musinsa.shop.domain.Goods;
-import com.musinsa.shop.domain.GoodsRequestDto;
-import com.musinsa.shop.domain.GoodsResponseDto;
+import com.musinsa.shop.domain.goods.Goods;
+import com.musinsa.shop.domain.goods.GoodsRequestDto;
+import com.musinsa.shop.domain.goods.GoodsResponseDto;
 import com.musinsa.shop.common.exception.CustomException;
 import com.musinsa.shop.common.exception.ErrorCode;
 import com.musinsa.shop.repository.GoodsRepository;
@@ -34,8 +34,7 @@ public class GoodsService {
     }
 
     public List<GoodsResponseDto> findAll(){
-        Sort sort = Sort.by(Sort.Direction.DESC, "goodsNo");
-        List<Goods> list = goodsRepository.findAll(sort);
+        List<Goods> list = goodsRepository.findAllWithCompanyUsingFetchJoin();
         return list.stream().map(GoodsResponseDto::new).collect(Collectors.toList());
     }
 
