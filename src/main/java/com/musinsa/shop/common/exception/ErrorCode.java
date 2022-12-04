@@ -21,10 +21,7 @@ public enum ErrorCode {
     /* 500 INTERNAL_SERVER_ERROR: 내부 서버 오류 */
     INTERNAL_SERVER_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, "서버 오류입니다."),
 
-
-    /* Goods */
-
-    GOODS_NOT_FOUND(HttpStatus.NOT_FOUND, "존재하지 않는 상품입니다."),
+    TARGET_NOT_FOUND(HttpStatus.NOT_FOUND, "조회되지 않는 대상입니다."),
 
     CONFLICT_GOODS(HttpStatus.CONFLICT, "이미 존재하는 상품 번호 입니다.")
     ;

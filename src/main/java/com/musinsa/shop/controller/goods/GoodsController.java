@@ -37,7 +37,7 @@ public class GoodsController {
     }
 
     @DeleteMapping("/{goodsNo}")
-    public void delete(@PathVariable final Integer goodsNo){
-        goodsService.delete(goodsNo);
+    public GoodsResponseDto delete(@PathVariable final Integer goodsNo){
+        return goodsService.delete(goodsNo);
     }
 }

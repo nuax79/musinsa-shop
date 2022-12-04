@@ -19,7 +19,6 @@ public class Goods {
 
     private String description;
 
-
     private String comId;
 
     @ManyToOne(optional=false)
