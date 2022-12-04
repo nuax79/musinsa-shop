@@ -8,29 +8,41 @@
 
 
 
-## Usage
+## Project Usage
 
-### Gradle Build
+### Project Build
 ```bash
 $ gradlew clean build -x test
 ```
 
-### Gradle Test
+### Project Test
 ```bash
 $ gradlew clean test
 ```
 
-### Gradle Run
+### Project Run (port 8080)
 ```bash
 $ gradlew bootrun
 ```
 
+## Project Docker Usage
+
 ### Docker Build
 ```bash
-docker build -t ghcr.io/misoboy/musinsa-api:latest -f Dockerfile .
+docker build -t musinsa/musinsa-shop:latest -f Dockerfile .
+```
+
+### Docker images
+```bash
+docker images
 ```
 
 ### Docker run
 ```bash
-docker run -d --name musinsa-api -p 8080:8080 ghcr.io/misoboy/musinsa-api:latest
+docker run -d --name musinsa-shop -p 8080:8080 musinsa/musinsa-shop:latest 
+```
+
+### Docker verification
+```bash
+docker ps -a
 ```
