@@ -10,6 +10,13 @@
 
 ## Project Usage
 
+https://github.com/nuax79/musinsa-shop.git
+
+### Project Git Clone
+```bash
+$ git clone https://github.com/nuax79/musinsa-shop.git
+```
+
 ### Project Build
 ```bash
 $ gradlew clean build -x test
