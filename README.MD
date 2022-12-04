@@ -6,11 +6,7 @@
 * Build : Gradle 7.5.1
 * H2 Database (InMemory)
 
-
-
 ## Project Usage
-
-https://github.com/nuax79/musinsa-shop.git
 
 ### Project Git Clone
 ```bash
