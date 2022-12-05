@@ -15,17 +15,17 @@ $ git clone https://github.com/nuax79/musinsa-shop.git
 
 ### Project Build
 ```bash
-$ gradlew clean build -x test
+$ ./gradlew clean build -x test
 ```
 
 ### Project Test
 ```bash
-$ gradlew clean test
+$ ./gradlew clean test
 ```
 
 ### Project Run (port 8080)
 ```bash
-$ gradlew bootrun
+$ ./gradlew bootrun
 ```
 
 ## Project Docker Usage
