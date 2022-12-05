@@ -17,12 +17,20 @@ public class CompanyController {
 
     private final CompanyService companyService;
 
-
+    /**
+     * 업체 LIST 조회
+     * @return
+     */
     @GetMapping("")
     public List<CompanyResponseDto> findAll(){
         return companyService.findAll();
     }
 
+    /**
+     * 업체 단건 조회
+     * @param no
+     * @return
+     */
     @GetMapping("/{no}")
     public CompanyResponseDto findById(@PathVariable Long no){
         return companyService.findById(no);

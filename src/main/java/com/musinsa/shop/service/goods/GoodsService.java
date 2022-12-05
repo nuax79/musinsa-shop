@@ -1,15 +1,12 @@
 package com.musinsa.shop.service.goods;
 
-import com.musinsa.shop.domain.company.CompanyResponseDto;
 import com.musinsa.shop.domain.goods.Goods;
 import com.musinsa.shop.domain.goods.GoodsRequestDto;
 import com.musinsa.shop.domain.goods.GoodsResponseDto;
 import com.musinsa.shop.common.exception.CustomException;
 import com.musinsa.shop.common.exception.ErrorCode;
-import com.musinsa.shop.repository.CompanyRepository;
 import com.musinsa.shop.repository.GoodsRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -52,7 +49,7 @@ public class GoodsService {
     /**
      * 상품 수정
      * @param goodsNo Integer
-     * @param params GoodsRe
+     * @param params GoodsRequestDto
      * @return
      */
     @Transactional
@@ -68,9 +65,9 @@ public class GoodsService {
      * @return
      */
     @Transactional(readOnly = true)
-    public Goods findById(final Integer goodsNo){
+    public GoodsResponseDto findById(final Integer goodsNo){
         Goods entity = goodsRepository.findById(goodsNo).orElseThrow(() -> new CustomException(ErrorCode.TARGET_NOT_FOUND));
-        return entity;
+        return new GoodsResponseDto(entity);
     }
 
     /**

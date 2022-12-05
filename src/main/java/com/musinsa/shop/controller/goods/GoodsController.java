@@ -16,26 +16,51 @@ public class GoodsController {
 
     private final GoodsService goodsService;
 
-    @PostMapping("")
+
+    /**
+     * 상품 등록
+     * @return
+     */
+    @PostMapping
     public Integer save(@RequestBody final GoodsRequestDto params){
         return goodsService.save(params);
     }
 
-    @GetMapping("")
+    /**
+     * 상품 List 조회
+     * @return
+     */
+    @GetMapping
     public List<GoodsResponseDto> findAll(){
         return goodsService.findAll();
     }
 
+    /**
+     * 상품 수정
+     * @param goodsNo Integer
+     * @param params GoodsRequestDto
+     * @return
+     */
     @PutMapping("/{goodsNo}")
     public Integer update(@PathVariable final Integer goodsNo, @RequestBody final GoodsRequestDto params){
         return goodsService.update(goodsNo, params);
     }
 
+    /**
+     * 상품 단건 조회
+     * @param goodsNo Integer
+     * @return
+     */
     @GetMapping("/{goodsNo}")
-    public Goods findById(@PathVariable final Integer goodsNo){
+    public GoodsResponseDto findById(@PathVariable final Integer goodsNo){
         return goodsService.findById(goodsNo);
     }
 
+    /**
+     * 상품 삭제
+     * @param goodsNo Integer
+     * @return
+     */
     @DeleteMapping("/{goodsNo}")
     public GoodsResponseDto delete(@PathVariable final Integer goodsNo){
         return goodsService.delete(goodsNo);
