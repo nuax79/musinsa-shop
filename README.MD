@@ -49,3 +49,6 @@ docker run -d --name musinsa-shop -p 8080:8080 musinsa/musinsa-shop:latest
 ```bash
 docker ps -a
 ```
+
+## ETC
+* `API Throtiling` - API의 Throtiling(Api Rate Limit) 적용을 위해 1분에 10회 Request 제한 적용 (초과시 : "Too many requests")

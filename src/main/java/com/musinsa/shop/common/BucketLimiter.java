@@ -16,18 +16,17 @@ public class BucketLimiter {
     private static Integer bucket = MAX_BUCKET_SIZE_PER_MIN; //버켓 10
 
     static {
+        // 1분에 10개 제한 설정
         new Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
                 increase();
             }
-        }, 1 * 60 * 1000, 1 * 60 * 1000); // 1분에 10개
+        }, 1 * 60 * 1000, 1 * 60 * 1000);
     }
 
     public synchronized static void increase() {
-        bucket = MAX_BUCKET_SIZE_PER_MIN; // 버켓 리필
-
-
+        bucket = MAX_BUCKET_SIZE_PER_MIN;
         log.info("Reset the bucket size to {}", bucket);
     }
 

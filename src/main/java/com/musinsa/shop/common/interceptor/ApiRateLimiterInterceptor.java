@@ -22,8 +22,8 @@ public class ApiRateLimiterInterceptor implements HandlerInterceptor {
             ObjectMapper mapper = new ObjectMapper();
             response.setContentType("application/json");
             response.setStatus(429); // Too many requests
-            response.getWriter().write(mapper.writeValueAsString("Request Throttled."));
-            log.info("Request Throttled.");
+            response.getWriter().write(mapper.writeValueAsString("Too many requests."));
+            log.info("Too many requests");
             return false;
         }
     }
