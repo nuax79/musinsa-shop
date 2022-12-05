@@ -65,7 +65,7 @@ public class GoodsTest {
     @Test
     @Order(3)
     @DisplayName("Goods Detail")
-    void goodsDetail(){
+    void getGoodsDetail(){
 
         Integer goodsNo = 3;
 
